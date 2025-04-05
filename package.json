@@ -9,7 +9,8 @@
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
     "dev": "npm-run-all clean parcel:serve",
     "build": "npm-run-all clean parcel:build",
-    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'"
+    "start": "parcel serve src/index.html --public-url / --dist-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "targets": {
     "web": {
@@ -45,7 +46,9 @@
     "sharp": "^0.33.5"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "animate.css": "^4.1.1",
+    "bootstrap": "^5.3.5",
     "hover.css": "^2.3.2",
     "stylelint": "^16.17.0"
   }
