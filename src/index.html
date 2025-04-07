@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
-    <title>Bootstrap w/ Parcel</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" as="style" as="style">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="preload" href="assets/images/fondo.webp" as="image">
+    <title>Inicio</title>
     <script type="module" src="assets/scripts/main.js"></script>
   </head>
   <body>
-    <div class="container py-4 px-3 mx-auto">
-      <h1>Hello, Bootstrap</h1>
-      <button class="btn btn-primary">Primary button</button>
-    </div>
+    <include src="./views/header.html"></include>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script>
   </body>

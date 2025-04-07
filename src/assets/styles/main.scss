@@ -6,15 +6,22 @@
 /**
  * Import variables
  */
+ //@imports fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 
-@import "variables";
-@import "bootstrap/scss/bootstrap.scss";
 
+@import "base/variables";
+@import "helpers/mixins";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
 /**
  * Import npm dependencies
  * see: https://v2.parceljs.org/features/module-resolution/
  * see commented examples below
  */
+ //@imports dependencies
+ @import "../../../node_modules/animate.css/animate.css";
+ @import "../../../node_modules/hover.css/css/hover.css";
+
 
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
@@ -24,7 +31,10 @@
  * It's a best practice to use a different partial for each page
  */
 
-@import "layouts/home";
+@import "base/base";
+@import "base/typografy";
+@import "layouts/headerPoster";
+@import "layouts/footer";
 
 /**
  * Do NOT include anything else in this file!
