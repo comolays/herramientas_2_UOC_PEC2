@@ -107,21 +107,27 @@ header {
         order: 2;
         width: 30%;
         align-self: end;
+        container-type: inline-size;
+        container-name: boxfour;
         position: relative;
         bottom: 2cm;
         @include poster-box-blue;
     }
 
-    &__post--sentence {
-        order: 3;
-        width: fit-content;
-        height: fit-content;
-        border-radius: 0.2cm;
-        background-color: #35f60a;
-        align-self: center;
+    @container boxfour (width < 600px) {
+        .poster__post--four {
+            background-color: #eca539;
+        }
     }
 
-    @media (max-width: 770px){
+    &__post--sentence {
+        order: 3;
+        align-self: center;
+        border-radius: 0.2cm;
+        background-color: #35f60a;
+    }
+
+    @media (max-width: 770px) {
 
         margin-top: 0.5cm;
         gap: 50px;
