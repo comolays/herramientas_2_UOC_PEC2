@@ -4,3 +4,29 @@
   border-radius: 0.2cm;
   background-color: #6b91f1;
 }
+
+@mixin grid-nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+@mixin nav-botones {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  justify-content: end;
+  justify-items: center;
+}
+  
+@mixin nav-botones-enlaces {
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 0.5cm;
+  background-color: #94e284;
+}
+          
+@mixin nav-botones-hover {
+  background-color: #eca539;
+}
+

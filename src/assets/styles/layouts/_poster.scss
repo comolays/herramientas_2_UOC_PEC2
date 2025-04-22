@@ -1,8 +1,9 @@
-header {
+// imagen del fondo del poster
+.header__poster {
     background-image: url(../images/fondo.jpg);
     background-size: cover;
     background-position: center;
-    height: fit-content;
+    height: auto;
 
     @supports (background-image: url('image.webp')) {
         & {
@@ -11,16 +12,40 @@ header {
     }
 }
 
+//código para cuando el navegador no soporte grid tanto del nav como del poster
+@supports not (display: grid) {
+.header__poster {
+    background-image: url(../images/fondo.jpg);
+    background-size: cover;
+    background-position: center 30%;
+    height: auto;
+}
 
 .encabezado {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
 
-    @media (max-width: 1000px) {
+    .nav__lista {
+        display: flex;
+    
+        .lista {
+
+            &__pag a {
+              @include nav-botones-enlaces;
+            }
+            
+            &__pag a:hover,
+            &__pag a:focus {
+              @include nav-botones-hover;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
         & {
-          grid-template-columns: 1fr;
-          justify-items: center;
+            flex-direction: column;
         }
     }
     
@@ -30,51 +55,18 @@ header {
         }
     }
 
-    .nav__lista {
-        display: grid;
-        grid-template-columns: repeat(3, 120px);
-        justify-content: end;
-        justify-items: center;
-    
-        .lista {
-
-            &__pag a {
-              padding: 10px;
-              text-decoration: none;
-              font-weight: 500;
-              border-radius: 0.5cm;
-              background-color: #94e284;
-            }
-            
-            &__pag a:hover,
-            &__pag a:focus {
-              background-color: #eca539;
-            }
-        }
-
-        @media (max-width: 1000px) {
-            & {
-              margin-top: 1cm;
-              justify-items: center;
-            }
-        }
-
-        @media (max-width: 450px) {
-            & {
-              grid-template-columns: 1fr;
-              gap: 25px;
-              padding: 10px;
-            }
+    @media screen and (max-width: 450px) {
+        & {
+          padding: 10px;
         }
     }
-    
 }
 
 .poster {
     display: flex;
     flex-direction: column;
     margin-top: 3cm;
-    gap: 20px;
+    width: 70%;
 
     &__post--one {
         order: 5;
@@ -84,6 +76,7 @@ header {
     }
 
     .postone__title {
+        width: 50%;
         background-color: #6b91f1;
     }
 
@@ -98,8 +91,6 @@ header {
     &__post--three {
         order: 1;
         width: 25%;
-        position: relative;
-        top: 1cm;
         @include poster-box-blue;
     }
 
@@ -107,17 +98,9 @@ header {
         order: 2;
         width: 30%;
         align-self: end;
-        container-type: inline-size;
-        container-name: boxfour;
         position: relative;
         bottom: 2cm;
         @include poster-box-blue;
-    }
-
-    @container boxfour (width < 600px) {
-        .poster__post--four {
-            background-color: #eca539;
-        }
     }
 
     &__post--sentence {
@@ -127,13 +110,14 @@ header {
         background-color: #35f60a;
     }
 
-    @media (max-width: 770px) {
+    @media screen and (max-width: 770px) {
 
         margin-top: 0.5cm;
         gap: 50px;
 
         &__post--one {
             align-self: center;
+            justify-items: center;
         }
     
         &__post--two {
@@ -158,8 +142,58 @@ header {
         }
     }   
 }
+}
 
-/*@supports (display: grid) {
+//código de la distribución del póster para cuando el navegador soporte grid
+@supports (display: grid) {
+    .encabezado {
+        @include grid-nav;
+    
+        @media (max-width: 1000px) {
+            & {
+              grid-template-columns: 1fr;
+              justify-items: center;
+            }
+        }
+        
+        @media (max-width: 330px) {
+            &__logo img{
+              width: 200px;
+            }
+        }
+    
+        .nav__lista {
+            @include nav-botones;
+        
+            .lista {
+    
+                &__pag a {
+                  @include nav-botones-enlaces;
+                }
+                
+                &__pag a:hover,
+                &__pag a:focus {
+                  @include nav-botones-hover;
+                }
+            }
+    
+            @media (max-width: 1000px) {
+                & {
+                  margin-top: 1cm;
+                  justify-items: center;
+                }
+            }
+    
+            @media (max-width: 450px) {
+                & {
+                  grid-template-columns: 1fr;
+                  gap: 25px;
+                  padding: 10px;
+                }
+            }
+        }
+    }
+
   .poster {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -167,6 +201,8 @@ header {
       justify-items: center;
       gap: 10px;
       margin-top: 2cm;
+      container-type: inline-size;
+      container-name: mainsentence;
   
       &__post--one {
           grid-column: 4;
@@ -175,6 +211,7 @@ header {
 
       .postone__title {
         background-color: #6b91f1;
+        width: fit-content;
       }
   
       &__post--two {
@@ -202,7 +239,12 @@ header {
           border-radius: 0.2cm;
           background-color: #35f60a;
       }
-  
+      
+      @container mainsentence (max-width: 400px) {
+        .poster__post--sentence {
+            background-color: rgb(223, 111, 197);
+        }
+      }
   
       @media (max-width: 1000px) {
           & {
@@ -278,4 +320,4 @@ header {
       }
      
     }
-}*/
+}
