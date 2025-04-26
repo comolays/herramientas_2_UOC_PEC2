@@ -1,20 +1,15 @@
-.speakers {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2cm;
-  margin-bottom: 2cm;
-  container-type: inline-size;
-  container-name: backgroundspeaker;
+@layer base, display;
 
-  &__titulo {
-    padding: 10px;
-    color: white;
-    border-radius: 0.5cm;
-    background-color: #35f60a;
-  }
+@layer base {
+  .speakers {
+    container-type: inline-size;
+    container-name: backgroundspeaker;
 
-  &__bloque {
+    &__titulo {
+      @include h2-style;
+    }
+
+    &__bloque {
       background-color: #6b91f1;
       border-radius: 20%;
       box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
@@ -24,26 +19,38 @@
             border-radius: 0.5cm;
         }
       }
-
-      @media (max-width: 750px) {
-        & {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-      }
   }
+}
 
-  .bloque {
+@layer display {
 
-    &__tarjeta {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 50px;
+  .speakers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2cm;
+    margin-bottom: 2cm;
+  
+        @media (max-width: 750px) {
+          & {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+    }
+  
+    .bloque {
+  
+      &__tarjeta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+      }
 
       @media (max-width: 750px) {
-        & {
+        &__tarjeta {
           display: flex;
           flex-direction: column;
         }

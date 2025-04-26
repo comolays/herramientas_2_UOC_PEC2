@@ -8,10 +8,27 @@
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" as="style">
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="preload" as="image" href="assets/images/persona1.webp">
+    <link rel="preload" as="image" href="assets/images/persona2.webp">
+    <link rel="preload" as="image" href="assets/images/persona3.webp">
+    <link rel="preload" as="image" href="assets/images/persona4.webp">
+    <link rel="preload" as="image" href="assets/images/persona5.webp">
+    <link rel="preload" as="image" href="assets/images/persona6.webp">
     <script type="module" src="assets/scripts/main.js"></script>
 </head>
 <body>
-    <include src="./views/nav-common.html"></include>
+  <header class="header__common">
+    <div class="navegar container animate__animated animate__fadeIn">
+        <div class="navegar__logo"><a href="index.html" title="Ir a Inicio"><img src="assets/images/logo.svg" width="300" height="54" alt="Logo de Ecojornadas" lang="es"></a></div>
+        <nav class="navegar__nav">
+          <ul class="nav__enlaces">
+            <li class="enlaces__pag p-1 ms-3"><a class="hvr-grow" href="index.html" title="Ir a Speakers" lang="es">Inicio</a></li>
+            <li class="enlaces__pag p-1 ms-3"><a class="hvr-grow" href="#" title="Ir a Blog" lang="es">Blog</a></li>
+            <li class="enlaces__pag p-1 ms-3"><a class="hvr-grow" href="contact.html" title="Ir a Contacto" lang="es">Contacto</a></li>
+          </ul>
+        </nav>
+    </div>
+</header>
     <main>
       <section class="speakers container animate__animated animate__zoomInUp">
         <h2 class="speakers__titulo mb-5">Speakers</h2>

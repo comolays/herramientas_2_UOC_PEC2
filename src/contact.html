@@ -8,90 +8,104 @@
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" as="style">
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
-    <link rel="preload" href="assets/images/fondo.webp" as="image">
     <script type="module" src="assets/scripts/main.js"></script>
   </head>
   <body>
-    <include src="./views/nav-common.html"></include>
-    <main class="container">
-      <section class="container">
-        <h2>Preguntas frecuentes (FAQ)</h2>
+    <header class="header__common">
+      <div class="navegar container animate__animated animate__fadeIn">
+          <div class="navegar__logo"><a href="index.html" title="Ir a Inicio"><img src="assets/images/logo.svg" width="300" height="54" alt="Logo de Ecojornadas" lang="es"></a></div>
+          <nav class="navegar__nav">
+            <ul class="nav__enlaces">
+              <li class="enlaces__pag p-1 ms-3"><a class="hvr-grow" href="index.html" title="Ir a Speakers" lang="es">Inicio</a></li>
+              <li class="enlaces__pag p-1 ms-3"><a class="hvr-grow" href="speakers.html" title="Ir a Contacto" lang="es">Speakers</a></li>
+              <li class="enlaces__pag p-1 ms-3"><a class="hvr-grow" href="#" title="Ir a Blog" lang="es">Blog</a></li>
+            </ul>
+          </nav>
+      </div>
+  </header>
+    <main class="bloque container animate__animated animate__bounceInLeft">
+      <section class="bloque__faq container">
+        <h2 class="faq__titulo mb-4">Preguntas frecuentes (FAQ)</h2>
         <div>
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Accordion Item #1
+                  ¿Qué temas se tratarán en las conferencias de economía circular?
                 </button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  Durante el evento abordaremos temas clave de la <strong>economía circular</strong>, como <strong>innovación sostenible</strong>, <strong>gestión de residuos</strong>, <strong>diseño de productos circulares</strong> y <strong>modelos de negocio regenerativos</strong>. Nuestros speakers compartirán experiencias prácticas y casos de éxito para inspirar la transición hacia un futuro más sostenible.
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Accordion Item #2
-                </button>
+                  ¿Dónde se celebrarán las conferencias en Barcelona?
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  El evento tendrá lugar en <strong>Rambla del Poblenou, 154-156</strong>. Pronto compartiremos todos los detalles sobre la ubicación exacta y cómo llegar, para que tu experiencia sea lo más cómoda posible.
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Accordion Item #3
+                  ¿Necesito registrarme para asistir a las conferencias?
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  Sí, es necesario registrarse previamente para asistir. La inscripción te permitirá reservar tu plaza y recibir actualizaciones sobre el programa y los speakers invitados. Muy pronto habilitaremos el formulario de registro en nuestra web y además enviaremos un email con las instrucciones para completar el proceso de registro de manera sencilla.
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="container">
-      <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <section class="bloque__alert container">
+      <svg xmlns="http://www.w3.org/2000/svg" class="alert__svg d-none">
       <symbol id="info-fill" viewBox="0 0 16 16">
         <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
       </symbol>
       </svg>
-      <div class="alert alert-primary d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
-        <div>
-          An example alert with an icon
+      <div class="alert alert-primary d-flex align-items-center alert__div" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:" width="40"><use xlink:href="#info-fill"/></svg>
+        <div class="div__sentence">
+          En caso de que quieras mayor información, ponte en contacto con nosotros mediante el formulario que te adjuntamos a continuación
         </div>
       </div>
     </section>
-      <section class="container">
-        <h2>Contacto</h2>
-        <div>
-          <div class="input-group flex-nowrap">
-            <span class="input-group-text" id="addon-wrapping">@</span>
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+    <hr>
+      <section class="bloque__form container">
+        <h2 class="form__titulo mb-4">Contacto</h2>
+        <div class="form__form">
+          <div class="form__campo mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre y apellidos</label>
+            <input type="text" class="form-control" placeholder="Nombre completo" aria-label="Nombre completo" aria-describedby="addon-wrapping">
           </div>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          <div class="form__campo mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
           </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+          <div class="form__campo mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Deja tu comentario</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
-          <div class="mb-3">
-            <label for="formFile" class="form-label">Default file input example</label>
+          <div class="form__campo mb-3">
+            <label for="formFile" class="form-label">Adjunta tu archivo</label>
             <input class="form-control" type="file" id="formFile">
+          </div>
+          <div class="d-grid gap-2">
+            <input class="btn btn-primary" type="submit" value="Enviar">
           </div>
         </div>
       </section>
     </main>
+    <hr class="container">
     <include src="./views/footer.html"></include>
   </body>
 </html>

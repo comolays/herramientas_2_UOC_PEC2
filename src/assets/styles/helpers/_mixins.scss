@@ -30,3 +30,11 @@
   background-color: #eca539;
 }
 
+@mixin h2-style {
+  padding: calc(2px + 1vw); 
+  color: white !important;
+  width: fit-content;
+  border-radius: calc(10px + 1vw);
+  background-color: oklch(0.8 0.2799 141.47);
+}
+

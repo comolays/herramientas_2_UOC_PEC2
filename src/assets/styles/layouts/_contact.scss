@@ -1,0 +1,105 @@
+@layer base, display, sections;
+
+@layer base {
+
+  .alert, .accordion {
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+  }
+
+  .bloque__form {
+    container-type: inline-size;
+    container-name: changecolor;
+  }
+
+
+  .form {
+
+    &__form {
+    background-color: color(display-p3 0.281 0.595 1 / 1);
+    padding: 30px;
+    border-radius: 0.5cm;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+  }
+
+  .faq__titulo,
+  .form__titulo {
+    @include h2-style; 
+    text-align: center;//se usa color oklch(0.8 0.2799 141.47)
+  }
+}
+
+@layer display {
+  .bloque {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 2cm;
+    margin-bottom: 2cm;
+  }
+}
+
+@layer secctions {
+  .alert {
+
+    &__div {
+      height: 70px;
+      width: fit-content;
+
+      @media (max-width: 765px) {
+        & {
+          height: 12svh;
+        }
+      }
+
+      @media (max-width: 450px) {
+        & {
+          height: 15svh;
+        }
+      }
+
+      @media (max-width: 360px) {
+        & {
+          height: 18svh;
+        }
+      }
+      }
+    }
+  
+  .bloque {
+
+    &__faq {
+      text-align: justify;
+
+      @media (max-width: 1000px) {
+        & {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      .form {
+        &__form {
+          display: flex;
+          flex-direction: column;
+          width: 500px;
+        }
+      }
+
+    @container changecolor (max-width: 450px) {
+      .form__form { 
+        width: 90dvw;
+      }
+    }
+    }
+  }
+}
