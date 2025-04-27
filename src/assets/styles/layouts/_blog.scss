@@ -81,6 +81,7 @@
       @container background (max-width: 550px) {
 
         .seccion__texto {
+          flex-direction: column;
           padding: 10px;
           background-color: #94e284;
           border: solid 2px;
