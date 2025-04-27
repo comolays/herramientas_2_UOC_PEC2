@@ -65,6 +65,12 @@
           height: 18svh;
         }
       }
+
+      @media (max-width: 320px) {
+        & {
+          height: 20svh;
+        }
+      }
       }
     }
   
@@ -72,6 +78,7 @@
 
     &__faq {
       text-align: justify;
+      line-height: 1.8em;
 
       @media (max-width: 1000px) {
         & {

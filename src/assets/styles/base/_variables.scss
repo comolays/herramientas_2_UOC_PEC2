@@ -2,9 +2,28 @@
 
 $font-cabecera: 'Roboto Flex', sans-serif;
 
-$theme-colors: (
- "primary": #94e284,
-);
 
 $header-section-box: #6b91f1;
 $header-nav-links: #94e284;
+
+//variables SASS de componentes Bootstrap
+$theme-colors: (
+ "primary": #94e284,
+);
+$color-accordion: #f2c6c6;
+$color-accordion-active: hsl(63, 68.3%, 71.6%);
+$color-accordion: rgb(74, 204, 237);
+$border-flat: 4px; //width
+$border-card: 50px; //radius
+
+//variables relacionadas con el componente de contact.html de Bootstrap
+$card-border-radius: $border-card;
+$card-border-width: $border-flat;
+
+//variables relacionadas con el componente acordeon de contact.html de Bootstrap
+$accordion-button-bg: $color-accordion;
+$accordion-button-active-bg: $color-accordion-active;
+
+//variables relacionadas con el componente "alert" de contact.html de Bootstrap
+$alert-border-width: $border-flat;
+$alert-border-radius: calc(10px + 2vw);
