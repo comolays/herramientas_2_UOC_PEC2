@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="¿Tienes dudas? Contáctanos y te las resolveremos tan pronto como nos sea posible.">
-    <title>Inicio</title>
+    <title>Contacto</title>
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" as="style">
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
@@ -13,7 +13,7 @@
   <body>
     <header class="header__common">
       <div class="navegar container animate__animated animate__fadeIn">
-          <div class="navegar__logo"><a href="index.html" title="Ir a Inicio"><img src="assets/images/logo.svg" width="300" height="54" alt="Logo de Ecojornadas" lang="es"></a></div>
+          <div class="navegar__logo"><a href="index.html" title="Ir a Inicio"><img src="assets/images/logo.svg" alt="Logo de Ecojornadas" lang="es" width="300" height="54"></a></div>
           <nav class="navegar__nav">
             <ul class="nav__enlaces">
               <li class="enlaces__pag p-1"><a class="hvr-grow" href="index.html" title="Ir a Speakers" lang="es">Inicio</a></li>
@@ -22,7 +22,7 @@
             </ul>
           </nav>
       </div>
-  </header>
+    </header>
     <main class="bloque container animate__animated animate__bounceInLeft">
       <section class="bloque__faq container">
         <h2 class="faq__titulo mb-4">Preguntas frecuentes (FAQ)</h2>
@@ -34,7 +34,7 @@
                   ¿Qué temas se tratarán en las conferencias de economía circular?
                 </button>
               </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-collapse collapse show" id="collapseOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   Durante el evento abordaremos temas clave de la <strong>economía circular</strong>, como <strong>innovación sostenible</strong>, <strong>gestión de residuos</strong>, <strong>diseño de productos circulares</strong> y <strong>modelos de negocio regenerativos</strong>. Nuestros speakers compartirán experiencias prácticas y casos de éxito para inspirar la transición hacia un futuro más sostenible.
                 </div>
@@ -44,8 +44,9 @@
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                   ¿Dónde se celebrarán las conferencias en Barcelona?
+                </button>
               </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-collapse collapse" id="collapseTwo" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   El evento tendrá lugar en <strong>Rambla del Poblenou, 154-156</strong>. Pronto compartiremos todos los detalles sobre la ubicación exacta y cómo llegar, para que tu experiencia sea lo más cómoda posible.
                 </div>
@@ -57,7 +58,7 @@
                   ¿Necesito registrarme para asistir a las conferencias?
                 </button>
               </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-collapse collapse" id="collapseThree" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   Sí, es necesario registrarse previamente para asistir. La inscripción te permitirá reservar tu plaza y recibir actualizaciones sobre el programa y los speakers invitados. Muy pronto habilitaremos el formulario de registro en nuestra web y además enviaremos un email con las instrucciones para completar el proceso de registro de manera sencilla.
                 </div>
@@ -67,37 +68,37 @@
         </div>
       </section>
       <section class="bloque__alert container">
-      <svg xmlns="http://www.w3.org/2000/svg" class="alert__svg d-none">
-      <symbol id="info-fill" viewBox="0 0 16 16">
-        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
-      </symbol>
-      </svg>
-      <div class="alert alert-primary d-flex align-items-center alert__div" role="alert">
-        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:" width="40"><use xlink:href="#info-fill"/></svg>
-        <div class="div__sentence">
-          En caso de que quieras mayor información, ponte en contacto con nosotros mediante el formulario que te adjuntamos a continuación
+        <svg class="alert__svg d-none" xmlns="http://www.w3.org/2000/svg">
+          <symbol id="info-fill" viewBox="0 0 16 16">
+            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+          </symbol>
+        </svg>
+        <div class="alert alert-primary d-flex align-items-center alert__div" role="alert">
+          <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:" width="40"><use xlink:href="#info-fill"/></svg>
+          <div class="div__sentence">
+            En caso de que quieras mayor información, ponte en contacto con nosotros mediante el formulario que te adjuntamos a continuación
+          </div>
         </div>
-      </div>
-    </section>
-    <hr>
+      </section>
+      <hr>
       <section class="bloque__form container">
         <h2 class="form__titulo mb-4">Contacto</h2>
         <div class="form__form">
           <div class="form__campo mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Nombre y apellidos</label>
-            <input type="text" class="form-control" placeholder="Nombre completo" aria-label="Nombre completo" aria-describedby="addon-wrapping">
+            <label class="form-label" for="exampleFormControlInput1">Nombre y apellidos</label>
+            <input class="form-control" type="text" placeholder="Nombre completo" aria-label="Nombre completo">
           </div>
           <div class="form__campo mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+            <label class="form-label" for="exampleFormControlInput1">Correo electrónico</label>
+            <input class="form-control" id="exampleFormControlInput1" type="email" placeholder="Email">
           </div>
           <div class="form__campo mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Deja tu comentario</label>
+            <label class="form-label" for="exampleFormControlTextarea1">Deja tu comentario</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
           <div class="form__campo mb-3">
-            <label for="formFile" class="form-label">Adjunta tu archivo</label>
-            <input class="form-control" type="file" id="formFile">
+            <label class="form-label" for="formFile">Adjunta tu archivo</label>
+            <input class="form-control" id="formFile" type="file">
           </div>
           <div class="d-grid gap-2">
             <input class="btn btn-primary" type="submit" value="Enviar">
