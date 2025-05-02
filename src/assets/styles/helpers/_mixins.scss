@@ -1,10 +1,19 @@
+//standar poster blue box style
 @mixin poster-box-blue {
   text-align: justify;
   height: fit-content;
   border-radius: 0.2cm;
-  background-color: #6b91f1;
+  background-color: $standar-blue;
 }
 
+//standar flex mixin
+@mixin flex-colum-aling {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//nav mixin
 @mixin grid-nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -17,23 +26,18 @@
   justify-content: end;
   justify-items: center;
 }
-  
 @mixin nav-botones-enlaces {
   padding: 10px;
-  text-decoration: none;
   font-weight: 500;
   border-radius: 0.5cm;
-  background-color: #94e284;
+  background-color: $header-nav-links;
+  text-decoration: none;
 }
-          
-@mixin nav-botones-hover {
-  background-color: #eca539;
-}
-
+//mixin for h2 in contact and speaker
 @mixin h2-style {
   padding: calc(2px + 1vw); 
-  color: white !important;
   width: fit-content;
+  color: white !important;
   border-radius: calc(10px + 1vw);
   background-color: oklch(0.8 0.2799 141.47);
 }

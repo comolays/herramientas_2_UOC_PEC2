@@ -1,10 +1,9 @@
 @layer base, display, sections;
-
+//layer witch desing styles
 @layer base {
 
-  .alert, .accordion {
-    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
-  }
+  .alert, 
+  .accordion { box-shadow: $shadow; }
 
   .bloque__form {
     container-type: inline-size;
@@ -13,99 +12,85 @@
 
 
   .form {
-
+    //style for whole form
     &__form {
     background-color: color(display-p3 0.281 0.595 1 / 1);
     padding: 30px;
+    font-weight: 500;
     border-radius: 0.5cm;
     color: white;
-    font-weight: 500;
-    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: $shadow;
     }
   }
-
+  //style h2 form
   .faq__titulo,
   .form__titulo {
-    @include h2-style; 
-    text-align: center;//se usa color oklch(0.8 0.2799 141.47)
+    @include h2-style; //se usa color oklch(0.8 0.2799 141.47)
+    text-align: center;
   }
 }
-
+//layer with Box model
 @layer display {
+  
   .bloque {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin-top: 2cm;
-    margin-bottom: 2cm;
-  }
-}
+    margin: 2cm auto;
 
-@layer secctions {
-  .alert {
-
-    &__div {
-      height: 70px;
-      width: fit-content;
-
-      @media (max-width: 765px) {
-        & {
-          height: 12svh;
-        }
-      }
-
-      @media (max-width: 450px) {
-        & {
-          height: 15svh;
-        }
-      }
-
-      @media (max-width: 360px) {
-        & {
-          height: 18svh;
-        }
-      }
-
-      @media (max-width: 320px) {
-        & {
-          height: 20svh;
-        }
-      }
-      }
-    }
-  
-  .bloque {
-
-    &__faq {
-      text-align: justify;
-      line-height: 1.8em;
-
-      @media (max-width: 1000px) {
-        & {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-      }
-    }
-
+    
     &__form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      @include flex-colum-aling;
   
       .form {
+        
         &__form {
           display: flex;
           flex-direction: column;
           width: 500px;
         }
       }
+  }
+}
+//layer with Positioning and Typographic
+@layer secctions {
+  .alert {
+
+    &__div {
+      height: 70px;
+      width: fit-content;
+    }
+
+    @media (max-width: 765px) {
+      &__div { height: 12svh; }
+    }
+
+    @media (max-width: 450px) {
+      &__div { height: 15svh; }
+    }
+
+    @media (max-width: 360px) {
+      &__div { height: 18svh; }
+    }
+
+    @media (max-width: 320px) {
+      &__div { height: 20svh; }
+    }
+  }
+  
+  .bloque {
+    //box of faqs
+    &__faq {
+      text-align: justify;
+      line-height: 1.8em;
+    }
+
+    @media (max-width: 1000px) {
+      &__faq { @include flex-colum-aling; }
+    }
 
     @container changecolor (max-width: 450px) {
-      .form__form { 
-        width: 90dvw;
-      }
+      .form__form { width: 90dvw; }
     }
     }
   }

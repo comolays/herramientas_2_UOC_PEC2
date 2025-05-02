@@ -1,10 +1,5 @@
-.article hr {
-  margin-top: 2cm;
-  margin-bottom: 2cm;
-}
-
 .seccion {
-
+  //main picture
   &__principal {
     background-image: url(../images/montjuic.webp);
     background-size: cover;
@@ -12,29 +7,25 @@
     height: 600px;
     margin-bottom: 2cm;
   }
-
+  //blockquoute
   &__cita:has(blockquote) {
     display: flex;
     gap: 3cm;
-    padding: 15px;
     align-items: center;
+    padding: 15px;
     width: 60%;
 
-    .cita{
+    .cita {
     
-      &__parrafo {
-        width: 80%;
-      }
-
+      &__parrafo { width: 80%; }
+      //sentence on the right of quoute
       &__frase {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex-colum-aling;
         padding: 15px;
         border: blue 4px solid;
         border-radius: 0.7cm;
         background-color: white;
-        box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: $shadow;
       }
     }
   }
@@ -52,21 +43,13 @@
   &__lista {
     margin: 0;
 
-    .lista__elemento h3{
-      text-decoration: underline;
-    }
-
-
+    .lista__elemento h3 { text-decoration: underline; }
   }
 
   @media (max-width: 780px) {
-    .lista__elemento {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+    .lista__elemento { @include flex-colum-aling; }
   }
-
+  //text on the bottom
   &__texto {
     display: flex;
     gap: 30px;
@@ -74,47 +57,41 @@
   }
 }
 
-.articulo__seccion{
+.articulo__seccion {
 
   container-type: inline-size;
   container-name: background;
-  
-      @container background (max-width: 550px) {
+  //container which display change
+  @container background (max-width: 550px) {
 
-        .seccion__texto {
-          flex-direction: column;
-          padding: 10px;
-          background-color: #94e284;
-          border: solid 2px;
-          border-radius: 0.5cm;
-        }
-      }
+    .seccion__texto {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      background-color: $header-nav-links;
+      border: solid 2px;
+      border-radius: 0.5cm;
+    }
+  }
 }
-
-
-
+//style for list in the middle of the web
 .articulo__seccion:has(ul) {
   display: flex;
   flex-direction: column;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding: 15px;
-  padding-right: 30px;
+  margin: 2cm auto;
+  padding: 15px 30px 15px 15px;
   color: white;
-  background-color: #6b91f1;
+  background-color: $standar-blue;
   border-radius: 0.5cm;
 }
 
 .articulo__seccion:has(button) {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  @include flex-colum-aling;
+  margin: 2cm auto;
 }
-
+//common text style
 :is(.seccion__lista, .cita__parrafo, .seccion__texto p) {
+  line-height: 1.8em;
   text-align: justify;
   font-weight: 500;
-  line-height: 1.8em;
-} 
+}

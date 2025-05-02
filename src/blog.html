@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" as="style">
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <!-- preloads of logo and each image of carousel -->
     <link rel="preload" href="assets/images/logo.svg" as="image">
     <link rel="preload" href="assets/images/montjuic.webp" as="image">
     <link rel="preload" href="assets/images/carru1.jpg" as="image">
@@ -16,6 +17,7 @@
     <script type="module" src="assets/scripts/main.js"></script>
   </head>
   <body>
+    <!-- nav -->
     <header class="header__common">
       <div class="navegar container animate__animated animate__fadeIn">
           <div class="navegar__logo"><a href="index.html" title="Ir a Inicio"><img src="assets/images/logo.svg" alt="Logo de Ecojornadas" lang="es" width="300" height="54"></a></div>
@@ -30,8 +32,11 @@
     </header>
     <main>
       <article class="articulo">
+        <!-- first section -->
         <section class="articulo__seccion">
+          <!-- main picture page -->
           <div class="seccion__principal animate__animated animate__lightSpeedInRight"></div>
+          <!-- quote and text -->
           <div class="seccion__cita container animate__animated animate__lightSpeedInRight">
             <blockquote class="cita__frase fs-3" cite="https://es.wikipedia.org/wiki/John_Maynard_Keynes">
               "El problema real de la humanidad no es tanto lograr nuevos pensamientos, sino escapar de los antiguos."
@@ -41,6 +46,7 @@
           </div>
         </section>
         <hr class="container">
+        <!-- section two with list -->
         <section class="articulo__seccion container">
           <ul class="seccion__lista">
             <li class="lista__elemento mt-4 mb-4">
@@ -58,6 +64,7 @@
           </ul>
         </section>
         <hr class="container">
+        <!-- section three with carousel -->
         <section class="articulo__seccion container">
           <div class="carousel slide" id="carouselExample">
             <div class="carousel-inner">
@@ -81,6 +88,7 @@
             </button>
           </div>
         </section>
+        <!-- section four with text -->
         <section class=" articulo__seccion container">
           <div class="seccion__texto">
             <p><span class="fs-2">L</span>a economía circular ha llegado para transformar la forma en que entendemos la producción, el consumo y la gestión de los recursos en nuestra sociedad. A diferencia del modelo lineal tradicional que sigue el ciclo "producir-usar-tirar", la economía circular se centra en mantener los productos, materiales y recursos en uso el mayor tiempo posible. Este modelo busca reducir el desperdicio, optimizar el uso de los recursos y disminuir el impacto ambiental, fomentando la reutilización, la reparación y el reciclaje. Barcelona se ha posicionado como una ciudad líder en la implementación de soluciones innovadoras para la economía circular, promoviendo la sostenibilidad a través de iniciativas tanto públicas como privadas. Durante nuestras jornadas, contaremos con la participación de expertos internacionales, empresas pioneras y representantes de la administración local que compartirán sus conocimientos, experiencias y estrategias para avanzar hacia un modelo económico más justo y respetuoso con el medio ambiente.</p>

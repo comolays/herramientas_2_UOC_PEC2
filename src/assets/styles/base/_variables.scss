@@ -1,11 +1,21 @@
 @use "sass:color";
 
+//font variable
 $font-cabecera: 'Roboto Flex', sans-serif;
 
 
-$header-section-box: #6b91f1;
+//color variables and shadow
+$common-background: #d6cfec;
+$nav-color: #eca539;
 $header-nav-links: #94e284;
+$nav-botones-hover: #eca539;
+$standar-blue: #6b91f1;
+$main-sentence: #35f60a;
 
+$shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.75);
+
+
+//--BOOTSTRAP--//
 //variables SASS de componentes Bootstrap
 $theme-colors: (
  "primary": #94e284,

@@ -1,65 +1,65 @@
 @layer base, display;
-
+//layer style of speakers webs (Box model, Typographic)
 @layer base {
   .speakers {
     container-type: inline-size;
     container-name: backgroundspeaker;
-
-    &__titulo {
-      @include h2-style;
-    }
-
+    //h2 style
+    &__titulo { @include h2-style; }
+    //speakers section
     &__bloque {
-      background-color: #6b91f1;
+      background-color: $standar-blue;
       border-radius: 20%;
-      box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+      box-shadow: $shadow;
 
       @container backgroundspeaker (max-width: 950px) {
-        & {
-            border-radius: 0.5cm;
-        }
-      }
-  }
-}
-}
-
-@layer display {
-
-  .speakers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2cm;
-    margin-bottom: 2cm;
-  
-        @media (max-width: 750px) {
-          & {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          }
-        }
-    }
-  
-    .bloque {
-  
-      &__tarjeta {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-      }
-
-      @media (max-width: 750px) {
-        &__tarjeta {
-          display: flex;
-          flex-direction: column;
-        }
+        & { border-radius: 0.5cm; }
       }
     }
-
+    
     .card-body {
       text-align: center;
       line-height: 1.8em;
     }
   }
+}
+
+//layer of positioning and box model
+@layer display {
+  //speakers general display
+  .speakers {
+    @include flex-colum-aling;
+    margin: 2cm auto;
+  
+      @media (max-width: 800px) {
+        & { @include flex-colum-aling; }
+      }
+
+      @media (max-width: 800px) {
+        &__bloque {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+      }
+    }
+    //style for card setion
+    .bloque {
+  
+      &__tarjeta {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @media (max-width: 800px) {
+        &__tarjeta {
+          display: flex;
+          flex-direction: column;
+        }
+
+        &__barra { display: none; }
+      }
+    }
+  }
+}

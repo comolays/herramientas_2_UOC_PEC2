@@ -8,10 +8,12 @@
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" as="style">
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
+        <!-- preloads of logo -->
     <link rel="preload" href="assets/images/logo.svg" as="image">
     <script type="module" src="assets/scripts/main.js"></script>
   </head>
   <body>
+    <!-- nav -->
     <header class="header__common">
       <div class="navegar container animate__animated animate__fadeIn">
           <div class="navegar__logo"><a href="index.html" title="Ir a Inicio"><img src="assets/images/logo.svg" alt="Logo de Ecojornadas" lang="es" width="300" height="54"></a></div>
@@ -25,10 +27,12 @@
       </div>
     </header>
     <main class="bloque container animate__animated animate__bounceInLeft">
+      <!-- faq section -->
       <section class="bloque__faq container">
         <h2 class="faq__titulo mb-4">Preguntas frecuentes (FAQ)</h2>
         <div>
           <div class="accordion" id="accordionExample">
+            <!-- faq one -->
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -41,6 +45,7 @@
                 </div>
               </div>
             </div>
+            <!-- faq two -->
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -53,6 +58,7 @@
                 </div>
               </div>
             </div>
+            <!-- faq three -->
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -68,6 +74,7 @@
           </div>
         </div>
       </section>
+      <!-- section with component of alert -->
       <section class="bloque__alert container">
         <svg class="alert__svg d-none" xmlns="http://www.w3.org/2000/svg">
           <symbol id="info-fill" viewBox="0 0 16 16">
@@ -82,21 +89,26 @@
         </div>
       </section>
       <hr>
+      <!-- form section -->
       <section class="bloque__form container">
         <h2 class="form__titulo mb-4">Contacto</h2>
         <div class="form__form">
+          <!-- input one -->
           <div class="form__campo mb-3">
             <label class="form-label" for="exampleFormControlInput1">Nombre y apellidos</label>
             <input class="form-control" type="text" placeholder="Nombre completo" aria-label="Nombre completo">
           </div>
+          <!-- input two -->
           <div class="form__campo mb-3">
             <label class="form-label" for="exampleFormControlInput1">Correo electrónico</label>
             <input class="form-control" id="exampleFormControlInput1" type="email" placeholder="Email">
           </div>
+          <!-- input three -->
           <div class="form__campo mb-3">
             <label class="form-label" for="exampleFormControlTextarea1">Deja tu comentario</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
+          <!-- input four -->
           <div class="form__campo mb-3">
             <label class="form-label" for="formFile">Adjunta tu archivo</label>
             <input class="form-control" id="formFile" type="file">
