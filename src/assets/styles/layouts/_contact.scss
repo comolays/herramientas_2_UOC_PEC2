@@ -14,12 +14,12 @@
   .form {
     //style for whole form
     &__form {
-    background-color: color(display-p3 0.281 0.595 1 / 1);
     padding: 30px;
     font-weight: 500;
     border-radius: 0.5cm;
     color: white;
     box-shadow: $shadow;
+    background-color: color(display-p3 0.281 0.595 1 / 1);
     }
   }
   //style h2 form

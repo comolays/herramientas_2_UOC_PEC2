@@ -15,14 +15,14 @@
   //bottons display
   .nav__lista {
     display: flex;
-  
-    .lista {
+  }
 
-      &__pag a { @include nav-botones-enlaces; }
-      
-      &__pag a:hover,
-      &__pag a:focus { background-color: $nav-botones-hover; }
-    }
+  .pag {
+
+    &__enlace  { @include nav-botones-enlaces; }
+    
+    &__enlace:hover,
+    &__enlace:focus { background-color: $nav-botones-hover; }
   }
 
   @media screen and (max-width: 1000px) {
@@ -150,14 +150,6 @@
     //bottons display
     .nav__lista {
       @include nav-botones;
-    
-      .lista {
-
-        &__pag a { @include nav-botones-enlaces; }
-        
-        &__pag a:hover,
-        &__pag a:focus { background-color: $nav-botones-hover; }
-      }
 
       @media (max-width: 1000px) {
         & {
@@ -173,6 +165,14 @@
           padding: 10px;
         }
       }
+    }
+
+    .pag {
+
+      &__enlace  { @include nav-botones-enlaces; }
+      
+      &__enlace:hover,
+      &__enlace:focus { background-color: $nav-botones-hover; }
     }
   }
   //general display of poster

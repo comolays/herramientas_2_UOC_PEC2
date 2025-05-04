@@ -6,7 +6,7 @@
   display: flex;
   width: 100%;
   padding: 20px;
-  background-color: #ebb1b1;;
+  background-color: #ebb1b1;
 }
 //nav display
 .navegar {
@@ -36,12 +36,12 @@
     }
   }
   //nav buttons style
-  .enlaces {
+  .pag {
 
-    &__pag a { @include nav-botones-enlaces; }
+    &__enlace { @include nav-botones-enlaces; }
 
-    &__pag a:hover,
-    &__pag a:focus { background-color: $nav-botones-hover; }
+    &__enlace:hover,
+    &__enlace:focus { background-color: $nav-botones-hover; }
   }
 
   @media (max-width: 1000px) {

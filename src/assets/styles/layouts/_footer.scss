@@ -50,8 +50,8 @@
       gap: 15px;
     }
     //center side of bottom area style hover
-    .lista__enlace a:hover,
-    .lista__enlace a:focus {
+    .enlace__web:hover,
+    .enlace__web:focus {
       color:black;
       cursor: pointer;
     }
@@ -137,8 +137,7 @@
     .pags__lista {
       display: flex;  
 
-        .lista__enlace {
-          margin-right: 20px; }
+        .lista__enlace { margin-right: 20px; }
     }
     //left section of bottom area with media
     .redes__lista {
@@ -147,8 +146,8 @@
         .lista__red { margin-right: 20px; }
     }
     //center section of bottom area with webs
-    .lista__enlace a:hover,
-    .lista__enlace a:focus {
+    .enlace__web:hover,
+    .enlace__web:focus {
       color:black;
       cursor: pointer;
     }
