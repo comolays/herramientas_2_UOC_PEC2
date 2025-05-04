@@ -1,22 +1,12 @@
-@layer base, display, sections;
+@layer base, display;
 //layer witch desing styles
 @layer base {
 
   .alert, 
   .accordion { box-shadow: $shadow; }
 
-  .bloque__form {
-    container-type: inline-size;
-    container-name: changecolor;
-  }
-
-
   .form {
-    //style for whole form
     &__form {
-    padding: 30px;
-    font-weight: 500;
-    border-radius: 0.5cm;
     color: white;
     box-shadow: $shadow;
     background-color: color(display-p3 0.281 0.595 1 / 1);
@@ -24,36 +14,11 @@
   }
   //style h2 form
   .faq__titulo,
-  .form__titulo {
-    @include h2-style; //se usa color oklch(0.8 0.2799 141.47)
-    text-align: center;
-  }
+  .form__titulo { @include h2-style; } //se usa color oklch(0.8 0.2799 141.47)
 }
-//layer with Box model
-@layer display {
-  
-  .bloque {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin: 2cm auto;
 
-    
-    &__form {
-      @include flex-colum-aling;
-  
-      .form {
-        
-        &__form {
-          display: flex;
-          flex-direction: column;
-          width: 500px;
-        }
-      }
-  }
-}
-//layer with Positioning and Typographic
-@layer secctions {
+//layer with Box model and Typographic
+@layer display {
   .alert {
 
     &__div {
@@ -79,6 +44,11 @@
   }
   
   .bloque {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 2cm auto;
+
     //box of faqs
     &__faq {
       text-align: justify;
@@ -88,10 +58,30 @@
     @media (max-width: 1000px) {
       &__faq { @include flex-colum-aling; }
     }
-
-    @container changecolor (max-width: 450px) {
-      .form__form { width: 90dvw; }
+    //box of forms
+    &__form {
+      @include flex-colum-aling;
+      container-type: inline-size;
+      container-name: changecolor;
+  
+      .form {
+        
+        &__form {
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+          padding: 30px;
+          font-weight: 500;
+          border-radius: 0.5cm;
+        }  
+    }
+    
+    @container changecolor (max-width: 900px) {
+      .form__form { width: 85%; }
     }
     }
   }
+
+  .faq__titulo,
+  .form__titulo { text-align: center; }
 }

@@ -1,5 +1,5 @@
 @layer base, display;
-//layer style of speakers webs (Box model, Typographic)
+//layer witch desing styles
 @layer base {
   .speakers {
     container-type: inline-size;
@@ -16,15 +16,10 @@
         & { border-radius: 0.5cm; }
       }
     }
-    
-    .card-body {
-      text-align: center;
-      line-height: 1.8em;
-    }
   }
 }
 
-//layer of positioning and box model
+//layer with Box model and Typographic
 @layer display {
   //speakers general display
   .speakers {
@@ -60,6 +55,11 @@
 
         &__barra { display: none; }
       }
+    }
+        
+    .card-body {
+      text-align: center;
+      line-height: 1.8em;
     }
   }
 }
